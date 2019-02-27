@@ -5,3 +5,37 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts 'Cleaning database...'
+Restaurant.destroy_all
+puts 'Creating restaurants...'
+
+Restaurant.create(name: 'riccio',   address: 'brussels', category: 'italian',  phone_number: '12345')
+Restaurant.create(name: 'fish',     address: 'fish',     category: 'japanese', phone_number: '12345')
+Restaurant.create(name: 'gazzetta', address: 'new york', category: 'italian',  phone_number: '12345')
+Restaurant.create(name: 'bol',      address: 'brussels', category: 'chinese',  phone_number: '12345')
+Restaurant.create(name: 'tero',     address: 'brussels', category: 'french',   phone_number: '12345')
+
+puts 'Finished!'
+
+# # db/seeds.rb
+# puts 'Cleaning database...'
+# Restaurant.destroy_all
+
+# puts 'Creating restaurants...'
+# restaurants_attributes = [
+#   {
+#     name:         'Dishoom',
+#     address:      '7 Boundary St, London E2 7JE',
+#     description:  'Buzzy destination for Indian street food in Bombay-style vintage decor.',
+#     stars:        5
+#   },
+#   {
+#     name:         'Pizza East',
+#     address:      '56A Shoreditch High St, London E1 6PQ',
+#     description:  'Pizzeria with industrial looks, serving rustic pizza and antipasti.',
+#     stars:        4
+#   }
+# ]
+# Restaurant.create!(restaurants_attributes)
+# puts 'Finished!'
